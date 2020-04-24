@@ -1,32 +1,42 @@
-//String Functions
-let firstname = "Vanshika"
-let lastname = "Bhojnagarwala"
-
-function print(fname,lname){
-    let full = fname + " " + lname
-    console.log("Full name : "+full.toUpperCase())
-
-    let len = full.length
-    console.log("Name length : "+len)
+let student1 = {
+    name: "test1",
+    age: 18,
+    school: "srm",
+    subjectList: ["Computer", "Maths", "English"],
+    marks: [95, 95, 96],
+    printDetails: () => {
+        console.log("Name : " +student1.name + " Age : " +student1.age + " School : " +student1.school);
+    }
 }
 
-print(firstname,lastname)
-
-//Menu Driven
-let ch = 2
-let day = "sunday"
-switch(ch){
-    case 1 :if(day === "saturday" || day === "sunday")
-                console.log(day+" is a holiday")
-             else
-                console.log(day+"is a weekday")
-
-            break;
-
-    case 2 :for(let i=5;i<=100;i+=5)
-                console.log(i)
-
-            break;
-
-    default :console.log("Wrong Input")
+let student2 = {
+    name: "test2",
+    age: 19,
+    school: "srm",
+    subjectList: ["Computer", "Maths", "English"],
+    marks: [95, 90, 96],
+    printDetails: () => {
+        console.log("Name : " +student2.name + " Age : " +student2.age + " School : " +student2.school);
+    }
 }
+
+let student3 = {
+    name: "test3",
+    age: 18,
+    school: "srm",
+    subjectList: ["Computer", "Maths", "English"],
+    marks: [92, 95, 96],
+    printDetails: () => {
+        console.log("Name : " +student3.name + " Age : " +student3.age + " School : " +student3.school);
+    }
+}
+
+let avg = (obj) =>{
+    obj.printDetails();
+    let avg = (obj.marks[0] + obj.marks[1] + obj.marks[2])/3
+    console.log("Avg : " + avg)
+}
+
+avg(student1)
+avg(student2)
+avg(student3)
